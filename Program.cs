@@ -108,7 +108,7 @@ namespace Project0001
                 for (int a = 0; a < i; a++)
                 {
                     student.Id[a] = Guid.NewGuid();
-                    Console.WriteLine("\nStudent " + (a + 1) + ": Guid:" + student.Id[a] + ", FullName: " +
+                    Console.WriteLine("\nStudent " + (a + 1) + ": Guid: " + student.Id[a] + ", FullName: " +
                         student.FirstName[a].Replace(" ", "") + " " + student.LastName[a].Replace(" ", "") +
                         ", MobileNumber: " + student.MobileNumber[a] + ", age: " + year + ", CardNumber: " +
                         student.CardNumber[a] + " (" + student.BankName[a] + ")");
