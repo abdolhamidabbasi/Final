@@ -1,4 +1,4 @@
-﻿namespace Project0001.Models;
+﻿namespace Final.Models;
 
 public class Student
 {
@@ -8,5 +8,6 @@ public class Student
     public string[]? CardNumber { get; set; } = new string[2];
     public string[]? BankName { get; set; } = new string[2];
     public string[]? YearofBirth { get; set; } = new string[2];
+    public int[]? Age { get; set; } = new int[2];
     public Guid[] Id { get; set; } = new Guid[2];
 }

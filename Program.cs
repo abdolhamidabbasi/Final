@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System.Text.RegularExpressions;
-using Project0001.Models;
-namespace Project0001
+using Final.Models;
+namespace Final
 {
     internal class Program
     {
@@ -56,20 +56,19 @@ namespace Project0001
                     }
                     Console.WriteLine("It is not a valid Number! \nTry again:");
                 }
-                int year = default;
                 while (true)
                 {
                     Console.WriteLine("Year of Birth: ");
                     if (Regex.IsMatch(student.YearofBirth[i] = Console.ReadLine(), @"^\d{4}$"))
                     {
-                        year = Convert.ToInt32(student.YearofBirth[i]);
-                        year = DateTime.Now.Year - year;
-                        if (year <= 126 && year >= 18)
+                        student.Age[i] = Convert.ToInt32(student.YearofBirth[i]);
+                        student.Age[i] = DateTime.Now.Year - student.Age[i];
+                        if (student.Age[i] <= 126 && student.Age[i] >= 18)
                         {
                             break;
                         }
-                        year = year - 621;
-                        if (year <= 105 && year >= 18)
+                        student.Age[i] = student.Age[i] - 621;
+                        if (student.Age[i] <= 105 && student.Age[i] >= 18)
                         {
                             break;
                         }
@@ -110,7 +109,7 @@ namespace Project0001
                     student.Id[a] = Guid.NewGuid();
                     Console.WriteLine("\nStudent " + (a + 1) + ": Guid: " + student.Id[a] + ", FullName: " +
                         student.FirstName[a].Replace(" ", "") + " " + student.LastName[a].Replace(" ", "") +
-                        ", MobileNumber: " + student.MobileNumber[a] + ", age: " + year + ", CardNumber: " +
+                        ", MobileNumber: " + student.MobileNumber[a] + ", age: " + student.Age[a] + ", CardNumber: " +
                         student.CardNumber[a] + " (" + student.BankName[a] + ")");
                 }
                 Console.WriteLine("\nEnter (e) to exit, otherwise press (Enter) to add a new student");
