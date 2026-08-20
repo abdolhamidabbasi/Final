@@ -16,7 +16,7 @@ namespace Final
                 while (true)
                 {
                     Console.WriteLine("FirstName: ");
-                    if (Regex.IsMatch(student.FirstName[i] = Console.ReadLine(), @"^[a-zA-Z. ]{3,50}$"))
+                    if (Regex.IsMatch(student.FirstName[i] = Console.ReadLine(), @"^[a-zA-Z.]{3,50}$"))
                     {
                         break;
                     }
@@ -25,7 +25,7 @@ namespace Final
                 while (true)
                 {
                     Console.WriteLine("LastName: ");
-                    if (Regex.IsMatch(student.LastName[i] = Console.ReadLine(), @"^[a-zA-Z. ]{3,50}$"))
+                    if (Regex.IsMatch(student.LastName[i] = Console.ReadLine(), @"^[a-zA-Z.]{3,50}$"))
                     {
                         break;
                     }
